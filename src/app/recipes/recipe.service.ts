@@ -1,15 +1,31 @@
 import { EventEmitter } from '@angular/core';
 
+import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is simply a test',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gulyas080.jpg/280px-Gulyas080.jpg'),
-    new Recipe('Another Recipe 2', 'Same description :)',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/B%C5%93uf_bourguignon_05.JPG/1024px-B%C5%93uf_bourguignon_05.JPG')
+    new Recipe('Gouash Hongrois',
+      'de Journal des Femmes',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gulyas080.jpg/280px-Gulyas080.jpg',
+      [
+        new Ingredient('Viande de boeuf', 1),
+        new Ingredient('Oignons', 500),
+        new Ingredient('Tomates', 500),
+        new Ingredient('Poivrons', 2),
+        new Ingredient('Paprika', 3)
+      ]),
+    new Recipe('Boeuf Bourguignon',
+      'de Odelices',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/B%C5%93uf_bourguignon_05.JPG/1024px-B%C5%93uf_bourguignon_05.JPG',
+      [
+        new Ingredient('Viande de boeuf', 1),
+        new Ingredient('Oignons', 2),
+        new Ingredient('Carottes', 3),
+        new Ingredient('Gousse d\'ail', 1)
+      ])
   ];
 
   getRecipes(): Recipe[] {
