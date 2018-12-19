@@ -1,14 +1,16 @@
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-brand mb-0 h1">Recipe Book</span>
 
-  <ul class="nav mr-auto">
+  <ul class="nav nav-pills mr-auto">
     <li class="nav-item">
       <a class="nav-link"
-         [routerLink]="['/recipes']">Recipes</a>
+         [routerLink]="['/recipes']"
+         routerLinkActive="active">Recipes</a>
     </li>
     <li class="nav-item">
       <a class="nav-link"
-         [routerLink]="['/shopping-list']">Shopping List</a>
+         [routerLink]="['/shopping-list']"
+         routerLinkActive="active">Shopping List</a>
     </li>
   </ul>
   <ul class="nav justify-content-end">
