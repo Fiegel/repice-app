@@ -17,9 +17,10 @@
       <button class="btn btn-primary dropdown-toggle"
               type="button">Manage Recipe <span class="caret"></span></button>
       <ul class="dropdown-menu">
-        <li><a (click)="onAddToShoppingList()">To Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li><a class="dropdown-item"
+             (click)="onAddToShoppingList()">To Shopping List</a></li>
+        <li><a class="dropdown-item">Edit Recipe</a></li>
+        <li><a class="dropdown-item">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
