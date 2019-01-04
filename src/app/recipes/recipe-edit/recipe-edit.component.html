@@ -31,14 +31,16 @@
             <input type="text"
                    id="imagePath"
                    formControlName="imagePath"
-                   class="form-control">
+                   class="form-control"
+                   #imagePath>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row"
+           *ngIf="imagePath.value">
         <div class="col-12">
           <div class="form-group">
-            <img src=""
+            <img [src]="imagePath.value"
                  class="img-responsive">
           </div>
         </div>
