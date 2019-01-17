@@ -16,16 +16,19 @@
     </li>
   </ul>
   <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link"
-         routerLink="/signup">Register</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"
-         routerLink="/signin">Login</a>
-    </li>
+    <ng-template [ngIf]="!isAuthenticated()">
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/signup">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           routerLink="/signin">Login</a>
+      </li>
+    </ng-template>
     <li class="nav-item dropdown"
-        appDropdown>
+        appDropdown
+        *ngIf="isAuthenticated()">
       <a class="nav-link dropdown-toggle"
          role="button">Manage <span class="caret"></span></a>
       <div class="dropdown-menu">
