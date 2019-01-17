@@ -26,17 +26,23 @@
            routerLink="/signin">Login</a>
       </li>
     </ng-template>
-    <li class="nav-item dropdown"
-        appDropdown
-        *ngIf="isAuthenticated()">
-      <a class="nav-link dropdown-toggle"
-         role="button">Manage <span class="caret"></span></a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item"
-           (click)="onSaveData()">Save Data</a>
-        <a class="dropdown-item"
-           (click)="onFetchData()">Fetch Data</a>
-      </div>
-    </li>
+    <ng-template [ngIf]="isAuthenticated()">
+      <li class="nav-item">
+        <a class="nav-link"
+           style="cursor: pointer"
+           (click)="onLogout()">Logout</a>
+      </li>
+      <li class="nav-item dropdown"
+          appDropdown>
+        <a class="nav-link dropdown-toggle"
+           role="button">Manage <span class="caret"></span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item"
+             (click)="onSaveData()">Save Data</a>
+          <a class="dropdown-item"
+             (click)="onFetchData()">Fetch Data</a>
+        </div>
+      </li>
+    </ng-template>
   </ul>
 </nav>
