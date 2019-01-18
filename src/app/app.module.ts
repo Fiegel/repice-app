@@ -9,14 +9,13 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesModule } from './recipes/recipes.module';
-import { DropdownDirective } from './shared/dropdown.directive';
+import { SharedModule } from './shared/shared.module';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownDirective,
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
@@ -28,6 +27,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     FormsModule,
     HttpModule,
     RecipesModule,
+    SharedModule,
     AppRoutingModule
   ],
   providers: [],
