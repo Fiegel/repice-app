@@ -22,7 +22,6 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
