@@ -16,7 +16,7 @@
     </li>
   </ul>
   <ul class="nav justify-content-end">
-    <ng-template [ngIf]="!isAuthenticated()">
+    <ng-template [ngIf]="!(authState | async).authenticated">
       <li class="nav-item">
         <a class="nav-link"
            routerLink="/signup">Register</a>
@@ -26,7 +26,7 @@
            routerLink="/signin">Login</a>
       </li>
     </ng-template>
-    <ng-template [ngIf]="isAuthenticated()">
+    <ng-template [ngIf]="(authState | async).authenticated">
       <li class="nav-item">
         <a class="nav-link"
            style="cursor: pointer"
