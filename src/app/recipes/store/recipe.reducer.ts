@@ -1,5 +1,4 @@
-import { Ingredient } from 'src/app/shared/ingredient.model';
-
+import { Ingredient } from '../../shared/ingredient.model';
 import { AppState } from '../../store/app.reducer';
 import { Recipe } from '../recipe.model';
 import * as RecipeActions from './recipe.actions';
